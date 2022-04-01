@@ -21,7 +21,7 @@ onplayerspawned()
 
     for(;;)
     {
-        self waittill( "spawned_player" );
+        self waittill_any("spawned_player", "player_revived"); //	 When the player respawns or is revived.
         self IPrintLnBold( "Max Health Boosted From 100hp to 150hp" );
 		self.maxhealth=150;
         self.health=self.maxhealth;
